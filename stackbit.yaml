@@ -1,0 +1,535 @@
+stackbitVersion: ~0.3.0
+ssgName: gatsby
+publishDir: public
+dataDir: src/theme
+pagesDir: content
+models:
+  content:
+    type: page
+    label: Content
+    match:
+      - mock_posts/2017-10-01--two-things-are-infinite/index.md
+      - mock_posts/2017-10-03--be-who-you-are/index.md
+      - mock_posts/2017-10-05--you-only-live-once/index.md
+      - mock_posts/2017-10-07--people-will-forget/index.md
+      - mock_posts/2017-10-09--i-am-so-clever/index.md
+      - mock_posts/2017-10-11--imperfection-is-beauty/index.md
+      - mock_posts/2017-10-13--there-are-only-two/index.md
+      - mock_posts/2017-10-15--good-friends/index.md
+      - mock_posts/2017-10-17--i-have-not-failed/index.md
+      - mock_posts/2019-02-03--dont-send-your-own-email/index.md
+      - mock_posts/draft-post/index.md
+      - posts/2019-04-05--how-this-blog-is-made/index.md
+      - posts/2019-04-06--stop-bikeshedding-ai-ethics/index.md
+      - posts/2019-04-22--this-time-is-different/index.md
+      - posts/2019-07-01--dont-send-email-from-your-own-server/index.md
+      - posts/2019-08-08--how-to-set-up-email/index.md
+      - posts/2019-08-15--meddling-cryptographers/index.md
+      - posts/2019-08-21--tracedsvg-placeholders/index.md
+      - posts/2019-09-10--paypal-sends-phishing-emails/index.md
+      - posts/2019-10-02--thesis/index.md
+      - posts/2020-05-16--corosim/index.md
+      - posts/2020-08-29--money-out-of-thin-air/index.md
+      - posts/2020-12-17--trump-biden-betting-markets/index.md
+      - posts/2021-04-01--website-moves-your-cursor/index.md
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: list
+        name: tags
+        label: Tags
+        items:
+          type: string
+      - type: image
+        name: cover
+        label: Cover
+      - type: string
+        name: author
+        label: Author
+  content_1:
+    type: page
+    label: Content 1
+    match:
+      - pages/1--about/index.md
+      - pages/2--success/index.md
+      - pages/3--learn/index.md
+      - parts/author.md
+    fields:
+      - type: string
+        name: title
+        label: Title
+  theme:
+    type: data
+    label: Theme
+    file: theme.yaml
+    fields:
+      - type: object
+        name: space
+        label: Space
+        fields:
+          - type: string
+            name: default
+            label: Default
+          - type: string
+            name: xxs
+            label: Xxs
+          - type: string
+            name: xs
+            label: Xs
+          - type: string
+            name: s
+            label: S
+          - type: string
+            name: m
+            label: M
+          - type: string
+            name: l
+            label: L
+          - type: string
+            name: xl
+            label: Xl
+          - type: object
+            name: inset
+            label: Inset
+            fields:
+              - type: string
+                name: default
+                label: Default
+              - type: string
+                name: xs
+                label: Xs
+              - type: string
+                name: s
+                label: S
+              - type: string
+                name: m
+                label: M
+              - type: string
+                name: l
+                label: L
+          - type: object
+            name: stack
+            label: Stack
+            fields:
+              - type: string
+                name: default
+                label: Default
+              - type: string
+                name: xxs
+                label: Xxs
+              - type: string
+                name: xs
+                label: Xs
+              - type: string
+                name: s
+                label: S
+              - type: string
+                name: m
+                label: M
+              - type: string
+                name: l
+                label: L
+          - type: object
+            name: inline
+            label: Inline
+            fields:
+              - type: string
+                name: default
+                label: Default
+              - type: string
+                name: xxs
+                label: Xxs
+              - type: string
+                name: xs
+                label: Xs
+              - type: string
+                name: s
+                label: S
+              - type: string
+                name: m
+                label: M
+              - type: string
+                name: l
+                label: L
+      - type: object
+        name: size
+        label: Size
+        fields:
+          - type: object
+            name: radius
+            label: Radius
+            fields:
+              - type: string
+                name: default
+                label: Default
+              - type: string
+                name: small
+                label: Small
+      - type: object
+        name: color
+        label: Color
+        fields:
+          - type: object
+            name: menu
+            label: Menu
+            fields:
+              - type: string
+                name: border
+                label: Border
+          - type: object
+            name: neutral
+            label: Neutral
+            fields:
+              - type: string
+                name: white
+                label: White
+              - type: object
+                name: gray
+                label: Gray
+                fields:
+                  - type: string
+                    name: a
+                    label: A
+                  - type: string
+                    name: b
+                    label: B
+                  - type: string
+                    name: c
+                    label: C
+                  - type: string
+                    name: d
+                    label: D
+                  - type: string
+                    name: e
+                    label: E
+                  - type: string
+                    name: f
+                    label: F
+                  - type: string
+                    name: g
+                    label: G
+                  - type: string
+                    name: h
+                    label: H
+                  - type: string
+                    name: i
+                    label: I
+                  - type: string
+                    name: j
+                    label: J
+                  - type: string
+                    name: k
+                    label: K
+              - type: string
+                name: black
+                label: Black
+          - type: object
+            name: brand
+            label: Brand
+            fields:
+              - type: string
+                name: primary
+                label: Primary
+              - type: string
+                name: primaryLight
+                label: Primary Light
+              - type: string
+                name: primaryDark
+                label: Primary Dark
+              - type: string
+                name: hover
+                label: Hover
+              - type: string
+                name: primaryActive
+                label: Primary Active
+              - type: string
+                name: light
+                label: Light
+              - type: string
+                name: lightActive
+                label: Light Active
+              - type: string
+                name: dark
+                label: Dark
+              - type: string
+                name: darkActive
+                label: Dark Active
+          - type: object
+            name: special
+            label: Special
+            fields:
+              - type: string
+                name: attention
+                label: Attention
+      - type: object
+        name: font
+        label: Font
+        fields:
+          - type: object
+            name: family
+            label: Family
+            fields:
+              - type: string
+                name: initial
+                label: Initial
+              - type: string
+                name: target
+                label: Target
+          - type: object
+            name: weight
+            label: Weight
+            fields:
+              - type: number
+                name: standard
+                label: Standard
+                subtype: int
+              - type: number
+                name: bold
+                label: Bold
+                subtype: int
+          - type: object
+            name: size
+            label: Size
+            fields:
+              - type: string
+                name: xxs
+                label: Xxs
+              - type: string
+                name: xs
+                label: Xs
+              - type: string
+                name: s
+                label: S
+              - type: string
+                name: m
+                label: M
+              - type: string
+                name: l
+                label: L
+              - type: string
+                name: xl
+                label: Xl
+              - type: string
+                name: xxl
+                label: Xxl
+              - type: string
+                name: xxxl
+                label: Xxxl
+          - type: object
+            name: lineHeight
+            label: Line Height
+            fields:
+              - type: number
+                name: xs
+                label: Xs
+                subtype: float
+              - type: number
+                name: s
+                label: S
+                subtype: float
+              - type: number
+                name: m
+                label: M
+                subtype: float
+              - type: number
+                name: l
+                label: L
+                subtype: float
+              - type: number
+                name: xl
+                label: Xl
+                subtype: float
+              - type: number
+                name: xxl
+                label: Xxl
+                subtype: float
+              - type: number
+                name: reset
+                label: Reset
+                subtype: int
+      - type: object
+        name: time
+        label: Time
+        fields:
+          - type: object
+            name: duration
+            label: Duration
+            fields:
+              - type: string
+                name: default
+                label: Default
+              - type: string
+                name: long
+                label: Long
+      - type: object
+        name: background
+        label: Background
+        fields:
+          - type: object
+            name: color
+            label: Color
+            fields:
+              - type: string
+                name: primary
+                label: Primary
+              - type: string
+                name: alt
+                label: Alt
+              - type: string
+                name: brand
+                label: Brand
+      - type: object
+        name: text
+        label: Text
+        fields:
+          - type: string
+            name: family
+            label: Family
+          - type: object
+            name: color
+            label: Color
+            fields:
+              - type: string
+                name: primary
+                label: Primary
+              - type: string
+                name: primaryInverse
+                label: Primary Inverse
+              - type: string
+                name: brand
+                label: Brand
+              - type: string
+                name: attention
+                label: Attention
+          - type: object
+            name: lineHeight
+            label: Line Height
+            fields:
+              - type: number
+                name: default
+                label: Default
+                subtype: float
+          - type: object
+            name: maxWidth
+            label: Max Width
+            fields:
+              - type: string
+                name: tablet
+                label: Tablet
+              - type: string
+                name: desktop
+                label: Desktop
+      - type: object
+        name: heading
+        label: Heading
+        fields:
+          - type: string
+            name: family
+            label: Family
+          - type: object
+            name: size
+            label: Size
+            fields:
+              - type: string
+                name: h1
+                label: H 1
+              - type: string
+                name: h2
+                label: H 2
+              - type: string
+                name: h3
+                label: H 3
+          - type: object
+            name: lineHeight
+            label: Line Height
+            fields:
+              - type: number
+                name: h1
+                label: H 1
+                subtype: float
+              - type: number
+                name: h2
+                label: H 2
+                subtype: float
+              - type: number
+                name: h3
+                label: H 3
+                subtype: float
+          - type: number
+            name: weight
+            label: Weight
+            subtype: int
+      - type: object
+        name: line
+        label: Line
+        fields:
+          - type: string
+            name: color
+            label: Color
+      - type: object
+        name: icon
+        label: Icon
+        fields:
+          - type: string
+            name: color
+            label: Color
+      - type: object
+        name: hero
+        label: Hero
+        fields:
+          - type: boolean
+            name: hide
+            label: Hide
+          - type: object
+            name: h1
+            label: H 1
+            fields:
+              - type: string
+                name: size
+                label: Size
+              - type: string
+                name: color
+                label: Color
+              - type: number
+                name: lineHeight
+                label: Line Height
+                subtype: float
+          - type: string
+            name: background
+            label: Background
+      - type: object
+        name: blog
+        label: Blog
+        fields:
+          - type: object
+            name: h1
+            label: H 1
+            fields:
+              - type: string
+                name: size
+                label: Size
+              - type: number
+                name: lineHeight
+                label: Line Height
+                subtype: float
+              - type: string
+                name: hoverColor
+                label: Hover Color
+      - type: object
+        name: header
+        label: Header
+        fields:
+          - type: object
+            name: height
+            label: Height
+            fields:
+              - type: string
+                name: default
+                label: Default
+              - type: string
+                name: fixed
+                label: Fixed
+              - type: string
+                name: homepage
+                label: Homepage
